@@ -25,7 +25,7 @@ This project is built as a learning + fun game project and is actively evolving.
 
 Here’s a short gameplay recording:
 
-https://github.com/KamekaziAman/the-legend-of-kazi/issues/1#issue-3824638129
+https://github.com/user-attachments/assets/905b53ce-26c0-4a9c-96c5-1e30fab9e103
 
 > ⚠️ If the video doesn’t autoplay on GitHub, click the link to view/download it.
 
