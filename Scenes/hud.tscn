@@ -1,0 +1,150 @@
+[gd_scene load_steps=10 format=3 uid="uid://jir33jirdjgx"]
+
+[ext_resource type="Script" uid="uid://bbm6r2thyqj7p" path="res://Scenes/hud.gd" id="1_8jye8"]
+[ext_resource type="Texture2D" uid="uid://ifwwds7hunom" path="res://Assets/User_Interface/IconGodotNode/white/icon_paused.png" id="1_t1xeu"]
+[ext_resource type="Texture2D" uid="uid://du8kkggiwgrpi" path="res://Assets/User_Interface/IconGodotNode/white/icon_play.png" id="2_36asn"]
+[ext_resource type="Texture2D" uid="uid://cuyihgt1uucig" path="res://Assets/User_Interface/IconGodotNode/white/icon_coin.png" id="2_bjfho"]
+[ext_resource type="FontFile" uid="uid://dwbgwwxyspnp6" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="3_t1xeu"]
+[ext_resource type="Texture2D" uid="uid://blyjhdwf8pkys" path="res://Assets/User_Interface/IconGodotNode/control/icon_gem.png" id="4_36asn"]
+[ext_resource type="Texture2D" uid="uid://dsongamruje8j" path="res://Assets/User_Interface/IconGodotNode/node_3D/icon_bullet.png" id="5_8jye8"]
+[ext_resource type="PackedScene" uid="uid://5ybswfloed6h" path="res://Scenes/pause_menu.tscn" id="8_43w4t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36asn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_8jye8")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_36asn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 15.0
+offset_top = 12.0
+offset_right = -813.0
+offset_bottom = 44.5
+grow_horizontal = 2
+
+[node name="TextureButton" type="TextureButton" parent="Panel/HBoxContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("1_t1xeu")
+texture_pressed = ExtResource("2_36asn")
+stretch_mode = 5
+
+[node name="Coin" type="Node" parent="Panel/HBoxContainer"]
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Coin"]
+anchors_preset = -1
+anchor_left = 0.98946136
+anchor_top = -0.01875
+anchor_right = 0.98946136
+anchor_bottom = -0.01875
+offset_left = -219.0
+offset_top = 17.0
+offset_right = -183.0
+offset_bottom = 53.0
+grow_horizontal = 0
+texture = ExtResource("2_bjfho")
+
+[node name="Coin_Label" type="Label" parent="Panel/HBoxContainer/Coin"]
+anchors_preset = -1
+anchor_top = -0.014583333
+anchor_bottom = -0.014583333
+offset_left = 658.0
+offset_top = 22.0
+offset_right = 706.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_t1xeu")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gem2" type="Node" parent="Panel/HBoxContainer"]
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Gem2"]
+anchors_preset = -1
+anchor_left = 0.9789227
+anchor_top = -0.0375
+anchor_right = 0.9789227
+anchor_bottom = -0.0375
+offset_left = -130.0
+offset_top = 28.0
+offset_right = -98.0
+offset_bottom = 60.0
+grow_horizontal = 0
+texture = ExtResource("4_36asn")
+
+[node name="Gem_Label" type="Label" parent="Panel/HBoxContainer/Gem2"]
+anchors_preset = -1
+anchor_left = -0.018735362
+anchor_top = -0.008333334
+anchor_right = -0.018735362
+anchor_bottom = -0.008333334
+offset_left = 743.0
+offset_top = 21.0
+offset_right = 791.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.5568628, 0.9372549, 0.5921569, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_t1xeu")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bullet" type="Node" parent="Panel/HBoxContainer"]
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Bullet"]
+anchors_preset = -1
+anchor_left = 0.96604216
+anchor_top = -0.060416665
+anchor_right = 0.96604216
+anchor_bottom = -0.060416665
+offset_left = -52.0
+offset_top = 38.0
+offset_right = -20.0
+offset_bottom = 70.0
+grow_horizontal = 0
+texture = ExtResource("5_8jye8")
+
+[node name="Bullet_Label" type="Label" parent="Panel/HBoxContainer/Bullet"]
+anchors_preset = -1
+anchor_left = -0.037470724
+anchor_top = -0.008333334
+anchor_right = -0.037470724
+anchor_bottom = -0.008333334
+offset_left = 832.0
+offset_top = 25.0
+offset_right = 880.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.9882353, 0.49803922, 0.49803922, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_t1xeu")
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pauseMenu" parent="." instance=ExtResource("8_43w4t")]
+layer = 2
+visible = false
+
+[connection signal="toggled" from="Panel/HBoxContainer/TextureButton" to="." method="_on_texture_button_toggled"]

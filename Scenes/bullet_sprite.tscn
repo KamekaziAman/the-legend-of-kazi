@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bffmpq28xkimi"]
+
+[ext_resource type="Texture2D" uid="uid://blqidp6lht6c8" path="res://Assets/Obstacles/_1HBhS7BQ51dYZq1OhBgeRq9NLs4fVWQtnHDNJ3GU_8-removebg-preview.png" id="1_ahgvk"]
+[ext_resource type="Script" uid="uid://bjjvx8h14lucr" path="res://Scenes/bullet_sprite.gd" id="1_b563u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b563u"]
+radius = 8.0
+height = 32.0
+
+[node name="bullet" type="Area2D"]
+z_index = 2
+scale = Vector2(2.0400043, 2.0400043)
+collision_mask = 3
+script = ExtResource("1_b563u")
+
+[node name="bullet_sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.025961554, 0.025961554)
+texture = ExtResource("1_ahgvk")
+region_enabled = true
+region_rect = Rect2(150, 217, 150, 65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.22515336, -0.043088965)
+shape = SubResource("CapsuleShape2D_b563u")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

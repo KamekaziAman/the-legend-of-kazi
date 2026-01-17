@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ceuunhpi5roli"
+path="res://.godot/imported/Level Up Sound Effects All Sounds - All Sounds-[AudioTrimmer.com].mp3-66ae3d73532a167d631abbd66e230f88.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Level Up Sound Effects All Sounds - All Sounds-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Level Up Sound Effects All Sounds - All Sounds-[AudioTrimmer.com].mp3-66ae3d73532a167d631abbd66e230f88.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

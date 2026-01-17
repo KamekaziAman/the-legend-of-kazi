@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://va5huq4pe1u5"
+path="res://.godot/imported/Nanashi no Game Sound EP 01-Nameless Theme - Leress-[AudioTrimmer.com].mp3-18433194fd5d868ed05db4f5c9406e30.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Nanashi no Game Sound EP 01-Nameless Theme - Leress-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Nanashi no Game Sound EP 01-Nameless Theme - Leress-[AudioTrimmer.com].mp3-18433194fd5d868ed05db4f5c9406e30.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,16 @@
+# Godot generated files
+.godot/
+.import/
+
+# Exported builds
+*.exe
+*.pck
+*.zip
+.export/
+
+# Logs
+*.log
+
+# OS junk
+Thumbs.db
+.DS_Store

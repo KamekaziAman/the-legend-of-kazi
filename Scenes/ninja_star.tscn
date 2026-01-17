@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://clkgrjd0ysjqf"]
+
+[ext_resource type="Script" uid="uid://c4rak22dfhivs" path="res://Scenes/ninja_star.gd" id="1_0ds44"]
+[ext_resource type="Texture2D" uid="uid://cqhhacbgjv5bi" path="res://Assets/Obstacles/pixel-art-illustration-shuriken-removebg-preview.png" id="1_ejw6w"]
+[ext_resource type="AudioStream" uid="uid://c608q67domik7" path="res://Assets/Sounds/8 Bit Death Sound Effect - Sound Effect Database.mp3" id="3_nbqj2"]
+
+[sub_resource type="Animation" id="Animation_0ds44"]
+resource_name = "Ninja_star_rotation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.2831855]
+}
+
+[sub_resource type="Animation" id="Animation_nbqj2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hbky8"]
+_data = {
+&"Ninja_star_rotation": SubResource("Animation_0ds44"),
+&"RESET": SubResource("Animation_nbqj2")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tn22g"]
+radius = 4.0
+
+[node name="ninja_star" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_0ds44")
+
+[node name="PixelArtIllustrationShurikenRemovebgPreview" type="Sprite2D" parent="."]
+scale = Vector2(0.044943813, 0.044943817)
+texture = ExtResource("1_ejw6w")
+region_enabled = true
+region_rect = Rect2(39, 39, 179, 178)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PixelArtIllustrationShurikenRemovebgPreview"]
+libraries = {
+&"": SubResource("AnimationLibrary_hbky8")
+}
+autoplay = "Ninja_star_rotation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tn22g")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nbqj2")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

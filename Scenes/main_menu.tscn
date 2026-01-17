@@ -1,0 +1,1234 @@
+[gd_scene load_steps=114 format=3 uid="uid://blpojrlnfc7ta"]
+
+[ext_resource type="Script" uid="uid://cque8br6e2sw4" path="res://Scenes/main_menu.gd" id="1_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://ew8u40tehlp7" path="res://Assets/background/lolf6dabe91-c908-44d5-9891-4403fb558bd6_0.jpg" id="2_ce3w2"]
+[ext_resource type="FontFile" uid="uid://dwbgwwxyspnp6" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="3_n45e2"]
+[ext_resource type="Texture2D" uid="uid://dci1f82lihx2j" path="res://Assets/decorations/previous (1).png" id="4_ce3w2"]
+[ext_resource type="Script" uid="uid://b3rpr7xwkvgvd" path="res://Scenes/h_slider.gd" id="5_n45e2"]
+[ext_resource type="Texture2D" uid="uid://bntq6rntylqjo" path="res://Assets/character/ROBO WITH HANDS.png" id="6_opfnp"]
+[ext_resource type="Texture2D" uid="uid://bd8xn0p2oledx" path="res://Assets/character/SnowSaurai/IDLE.png" id="7_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://dlqw0tayj0t0w" path="res://Assets/character/SnowSaurai/RUN.png" id="8_trj04"]
+[ext_resource type="Texture2D" uid="uid://61wu1t4madcr" path="res://Assets/character/char_blue.png" id="9_trj04"]
+[ext_resource type="FontFile" uid="uid://co2vh3d6405ut" path="res://Assets/Fonts/PixelOperator8.ttf" id="10_16hvj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
+texture = ExtResource("2_ce3w2")
+modulate_color = Color(0.53701174, 0.53701115, 0.53701144, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
+bg_color = Color(0.22264269, 0.52559024, 0.17499751, 0.76862746)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0.8, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16hvj"]
+bg_color = Color(0.7294118, 0.78039217, 0, 0.7372549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhxw7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(1, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+bg_color = Color(0.029506553, 0.029506562, 0.029506536, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ce3w2"]
+color = Color(0.8551567, 0.86160284, 0.86587536, 1)
+thickness = 8
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_n45e2"]
+color = Color(0.2784314, 0.59607846, 0.16862746, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opfnp"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trj04"]
+bg_color = Color(0.9079417, 0.9079417, 0.90794164, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.15847227, 0.15847233, 0.15847221, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igrcy"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs7ks"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6n3p"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4iuc"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd4e3"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqcod"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0iea"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cp0ys"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igrcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs7ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6n3p")
+}],
+"loop": true,
+"name": &"Shooting",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkybt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ek2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx1dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gymyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu2lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukyrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dp3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4iuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd4e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqcod")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0iea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3wgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3smsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8erm5")
+}],
+"loop": true,
+"name": &"runing",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16hvj"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr1f0"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1dhk"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf70w"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5ukf"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68m11"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa016"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04fts"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l257b"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye13b"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi0re"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbvlx"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oubnj"]
+atlas = ExtResource("7_yhxw7")
+region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5egv6"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtepg"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dnnj"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3bi6"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyh8j"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujyyl"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkpwh"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nkqq"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehtkc"]
+atlas = ExtResource("6_opfnp")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icyfr"]
+atlas = ExtResource("8_trj04")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdpc4"]
+atlas = ExtResource("8_trj04")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvtug"]
+atlas = ExtResource("8_trj04")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhx3r"]
+atlas = ExtResource("8_trj04")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq838"]
+atlas = ExtResource("8_trj04")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj07c"]
+atlas = ExtResource("8_trj04")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nq474"]
+atlas = ExtResource("8_trj04")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jie8g"]
+atlas = ExtResource("8_trj04")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2umn6"]
+atlas = ExtResource("8_trj04")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2s0e7"]
+atlas = ExtResource("8_trj04")
+region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3hlk"]
+atlas = ExtResource("8_trj04")
+region = Rect2(960, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs5qw"]
+atlas = ExtResource("8_trj04")
+region = Rect2(1056, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwx6j"]
+atlas = ExtResource("8_trj04")
+region = Rect2(1152, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drc5b"]
+atlas = ExtResource("8_trj04")
+region = Rect2(1248, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka4rg"]
+atlas = ExtResource("8_trj04")
+region = Rect2(1344, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap113"]
+atlas = ExtResource("8_trj04")
+region = Rect2(1440, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dk6o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16hvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr1f0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1dhk")
+}],
+"loop": true,
+"name": &"Shooting",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf70w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5ukf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68m11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa016")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04fts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l257b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye13b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi0re")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbvlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oubnj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5egv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtepg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dnnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3bi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyh8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujyyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkpwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nkqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehtkc")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icyfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdpc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvtug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhx3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq838")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj07c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nq474")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jie8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2umn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2s0e7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3hlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs5qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwx6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drc5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ka4rg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap113")
+}],
+"loop": true,
+"name": &"runing",
+"speed": 18.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmmwh"]
+atlas = ExtResource("9_trj04")
+region = Rect2(0, 56, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk28q"]
+atlas = ExtResource("9_trj04")
+region = Rect2(56, 56, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68651"]
+atlas = ExtResource("9_trj04")
+region = Rect2(112, 56, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o742d"]
+atlas = ExtResource("9_trj04")
+region = Rect2(168, 56, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_biyha"]
+atlas = ExtResource("9_trj04")
+region = Rect2(224, 56, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spscn"]
+atlas = ExtResource("9_trj04")
+region = Rect2(280, 56, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vto7i"]
+atlas = ExtResource("9_trj04")
+region = Rect2(0, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvklj"]
+atlas = ExtResource("9_trj04")
+region = Rect2(56, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwxjn"]
+atlas = ExtResource("9_trj04")
+region = Rect2(112, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlung"]
+atlas = ExtResource("9_trj04")
+region = Rect2(168, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7ke7"]
+atlas = ExtResource("9_trj04")
+region = Rect2(224, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m03ne"]
+atlas = ExtResource("9_trj04")
+region = Rect2(280, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ylp0"]
+atlas = ExtResource("9_trj04")
+region = Rect2(0, 168, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1624"]
+atlas = ExtResource("9_trj04")
+region = Rect2(56, 168, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fssmx"]
+atlas = ExtResource("9_trj04")
+region = Rect2(112, 168, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kun5l"]
+atlas = ExtResource("9_trj04")
+region = Rect2(224, 168, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_essi2"]
+atlas = ExtResource("9_trj04")
+region = Rect2(336, 168, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av86x"]
+atlas = ExtResource("9_trj04")
+region = Rect2(392, 168, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6iq6"]
+atlas = ExtResource("9_trj04")
+region = Rect2(0, 224, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m683h"]
+atlas = ExtResource("9_trj04")
+region = Rect2(112, 224, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_panxu"]
+atlas = ExtResource("9_trj04")
+region = Rect2(168, 224, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myepu"]
+atlas = ExtResource("9_trj04")
+region = Rect2(280, 224, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbep4"]
+atlas = ExtResource("9_trj04")
+region = Rect2(336, 224, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx4o0"]
+atlas = ExtResource("9_trj04")
+region = Rect2(392, 224, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbk1i"]
+atlas = ExtResource("9_trj04")
+region = Rect2(0, 112, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6aygq"]
+atlas = ExtResource("9_trj04")
+region = Rect2(56, 112, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no842"]
+atlas = ExtResource("9_trj04")
+region = Rect2(112, 112, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acnqg"]
+atlas = ExtResource("9_trj04")
+region = Rect2(168, 112, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gthb6"]
+atlas = ExtResource("9_trj04")
+region = Rect2(224, 112, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysek0"]
+atlas = ExtResource("9_trj04")
+region = Rect2(280, 112, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvlrv"]
+atlas = ExtResource("9_trj04")
+region = Rect2(336, 112, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2wud"]
+atlas = ExtResource("9_trj04")
+region = Rect2(392, 112, 56, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16hvj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmmwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk28q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68651")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o742d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_biyha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spscn")
+}],
+"loop": true,
+"name": &"Shooting",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vto7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvklj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwxjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlung")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7ke7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m03ne")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ylp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1624")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fssmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kun5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_essi2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_av86x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6iq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m683h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_panxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myepu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbep4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xx4o0")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbk1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6aygq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no842")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acnqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gthb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysek0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvlrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2wud")
+}],
+"loop": true,
+"name": &"runing",
+"speed": 12.0
+}]
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ehe0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_opfnp")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -258.0
+offset_top = 67.0
+offset_right = 258.0
+offset_bottom = 99.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 32
+text = "The Legend of Kazi"
+
+[node name="MainButton" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -88.0
+offset_right = 122.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Start" type="Button" parent="MainButton"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.11764706, 0.37254903, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16hvj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cp0ys")
+text = "Start Game"
+
+[node name="Shop" type="Button" parent="MainButton"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.11764706, 0.37254903, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16hvj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1ehe0")
+text = "Shop"
+
+[node name="Option" type="Button" parent="MainButton"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.11764706, 0.37254903, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16hvj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1ehe0")
+text = "Options"
+
+[node name="Options" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -101.0
+offset_right = 161.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n45e2")
+
+[node name="Label" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 33.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 16
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 51.0
+offset_top = 52.0
+offset_right = -183.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 16
+text = "Music"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 51.0
+offset_top = 110.0
+offset_right = -183.0
+offset_bottom = 143.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 16
+text = "SFX"
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Options"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = 37.0
+offset_bottom = 33.235294
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.37254903, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1ehe0")
+icon = ExtResource("4_ce3w2")
+flat = true
+expand_icon = true
+
+[node name="Music Slider" type="HSlider" parent="Options"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 52.0
+offset_top = -38.0
+offset_right = -52.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_ce3w2")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_n45e2")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_n45e2")
+min_value = -80.0
+max_value = 6.0
+script = ExtResource("5_n45e2")
+audio_bus_name = "Music"
+
+[node name="SFX Slider" type="HSlider" parent="Options"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 52.0
+offset_top = 20.0
+offset_right = -52.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_ce3w2")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_n45e2")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_n45e2")
+min_value = -80.0
+max_value = 6.0
+script = ExtResource("5_n45e2")
+audio_bus_name = "SFX"
+
+[node name="Shop" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.0
+offset_top = -197.0
+offset_right = 300.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_opfnp")
+
+[node name="Back" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = 37.0
+offset_bottom = 33.235294
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.37254903, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1ehe0")
+icon = ExtResource("4_ce3w2")
+flat = true
+expand_icon = true
+
+[node name="Panel" type="Panel" parent="Shop"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 69.0
+offset_right = 139.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_trj04")
+
+[node name="Label" type="Label" parent="Shop"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 46.0
+offset_right = 138.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 8
+text = "Kazi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Select" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 145.0
+offset_right = 134.0
+offset_bottom = 166.0
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.37254903, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16hvj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cp0ys")
+text = "Select
+"
+
+[node name="player1" type="AnimatedSprite2D" parent="Shop"]
+position = Vector2(104, 86.99999)
+scale = Vector2(2.421874, 2.421874)
+sprite_frames = SubResource("SpriteFrames_cp0ys")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Panel2" type="Panel" parent="Shop"]
+layout_mode = 0
+offset_left = 182.49998
+offset_top = 68.5
+offset_right = 252.49998
+offset_bottom = 138.5
+theme_override_styles/panel = SubResource("StyleBoxFlat_trj04")
+
+[node name="Label2" type="Label" parent="Shop"]
+layout_mode = 0
+offset_left = 182.49998
+offset_top = 45.5
+offset_right = 251.49998
+offset_bottom = 68.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 8
+text = "Shirrak0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Select2" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 187.49998
+offset_top = 144.5
+offset_right = 247.49998
+offset_bottom = 165.5
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.37254903, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16hvj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cp0ys")
+text = "Select
+"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Shop"]
+position = Vector2(216, 79)
+scale = Vector2(1.6015623, 1.6015623)
+sprite_frames = SubResource("SpriteFrames_6dk6o")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Panel3" type="Panel" parent="Shop"]
+layout_mode = 0
+offset_left = 296.375
+offset_top = 69.374985
+offset_right = 366.375
+offset_bottom = 139.37498
+theme_override_styles/panel = SubResource("StyleBoxFlat_trj04")
+
+[node name="Label3" type="Label" parent="Shop"]
+layout_mode = 0
+offset_left = 292.405
+offset_top = 46.375
+offset_right = 368.405
+offset_bottom = 69.375
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 8
+text = "2pieradina"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Select3" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 301.375
+offset_top = 145.37498
+offset_right = 361.375
+offset_bottom = 166.37498
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.37254903, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16hvj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cp0ys")
+text = "Select
+"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Shop"]
+position = Vector2(332, 85.000015)
+scale = Vector2(1.6607141, 1.6607141)
+sprite_frames = SubResource("SpriteFrames_16hvj")
+animation = &"Shooting"
+autoplay = "idle"
+
+[node name="Label4" type="Label" parent="Shop"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 205.0
+offset_right = 520.0
+offset_bottom = 341.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_16hvj")
+text = "This Player Shop doesn’t work yet. Why?                                           Because I’m fucking lazy.
+An update with player switching may happen in future  when motivation respawns.    xD"
+autowrap_mode = 2
+
+[connection signal="pressed" from="MainButton/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="MainButton/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButton/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="MainButton/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Options/Music Slider" to="Options/Music Slider" method="_on_value_changed"]
+[connection signal="value_changed" from="Options/SFX Slider" to="Options/SFX Slider" method="_on_value_changed"]
+[connection signal="pressed" from="Shop/Back" to="." method="_on_back_pressed"]

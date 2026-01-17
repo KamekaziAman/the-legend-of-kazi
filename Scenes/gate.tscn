@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbnptjk5tnyo7"]
+
+[ext_resource type="Texture2D" uid="uid://codbcytnkii2b" path="res://Assets/Ground/vector-illustration-japanese-torii-gate-260nw-2576301173-removebg-preview.png" id="1_1lkl7"]
+[ext_resource type="Script" uid="uid://c2imqp3gpgxed" path="res://Scenes/gate.gd" id="1_hn85u"]
+[ext_resource type="PackedScene" uid="uid://cml0l1xgdnyon" path="res://Scenes/scene_manager.tscn" id="3_kfxhe"]
+[ext_resource type="AudioStream" uid="uid://8jpjp0k1xgps" path="res://Assets/Sounds/Win.mp3" id="4_4dmbs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hn85u"]
+size = Vector2(6, 14)
+
+[node name="Gate" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_hn85u")
+
+[node name="VectorIllustrationJapaneseToriiGate260Nw2576301173RemovebgPreview" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
+scale = Vector2(0.20312497, 0.20312499)
+texture = ExtResource("1_1lkl7")
+region_enabled = true
+region_rect = Rect2(64, 64, 134, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 8)
+shape = SubResource("RectangleShape2D_hn85u")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="transition" parent="." instance=ExtResource("3_kfxhe")]
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_4dmbs")
+volume_db = -2.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

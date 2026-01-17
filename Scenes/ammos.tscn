@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1efi8u2axoca"]
+
+[ext_resource type="Script" uid="uid://bibvtnwx0jo6" path="res://Scenes/ammos.gd" id="1_0rso5"]
+[ext_resource type="Script" uid="uid://bo750j1y6vxfj" path="res://Scenes/ammos_collison.gd" id="1_jbmlg"]
+[ext_resource type="Texture2D" uid="uid://blqidp6lht6c8" path="res://Assets/Obstacles/_1HBhS7BQ51dYZq1OhBgeRq9NLs4fVWQtnHDNJ3GU_8-removebg-preview.png" id="2_jbmlg"]
+[ext_resource type="AudioStream" uid="uid://b7buwppfkcx5t" path="res://Assets/Sounds/gunreload.mp3" id="4_2xq5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rso5"]
+size = Vector2(10, 7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0rso5"]
+radius = 1.0
+
+[node name="Ammos" type="AnimatableBody2D"]
+collision_mask = 2
+script = ExtResource("1_jbmlg")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("1_0rso5")
+
+[node name="bullet_sprite" type="Sprite2D" parent="Area2D"]
+position = Vector2(-4, 0)
+rotation = -1.5707964
+scale = Vector2(0.063352935, 0.06335293)
+texture = ExtResource("2_jbmlg")
+region_enabled = true
+region_rect = Rect2(150, 217, 150, 65)
+
+[node name="bullet_sprite2" type="Sprite2D" parent="Area2D"]
+position = Vector2(4, -1.4210855e-14)
+rotation = -1.5707964
+scale = Vector2(0.063352935, 0.06335293)
+texture = ExtResource("2_jbmlg")
+region_enabled = true
+region_rect = Rect2(150, 217, 150, 65)
+
+[node name="bullet_sprite3" type="Sprite2D" parent="Area2D"]
+position = Vector2(0, -1.4210855e-14)
+rotation = -1.5707964
+scale = Vector2(0.063352935, 0.06335293)
+texture = ExtResource("2_jbmlg")
+region_enabled = true
+region_rect = Rect2(150, 217, 150, 65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_0rso5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D"]
+stream = ExtResource("4_2xq5y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0rso5")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="hidden" from="CollisionShape2D" to="." method="_on_collision_shape_2d_hidden"]

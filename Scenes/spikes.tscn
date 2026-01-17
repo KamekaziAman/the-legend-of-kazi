@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://coiwh5xwlsxpl"]
+
+[ext_resource type="Texture2D" uid="uid://cdsbeumkayv4h" path="res://Assets/Obstacles/16-bit-spike-Sheet.png" id="1_a5dqs"]
+[ext_resource type="Script" uid="uid://c2fwqtwo74okg" path="res://Scenes/spikes.gd" id="1_gwqs2"]
+[ext_resource type="AudioStream" uid="uid://c608q67domik7" path="res://Assets/Sounds/8 Bit Death Sound Effect - Sound Effect Database.mp3" id="3_0qgod"]
+
+[node name="Spikes" type="Area2D"]
+script = ExtResource("1_gwqs2")
+
+[node name="16BitSpikeSheet" type="Sprite2D" parent="."]
+position = Vector2(240, 120)
+texture = ExtResource("1_a5dqs")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(240, 115, 232, 128, 248, 128)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0qgod")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

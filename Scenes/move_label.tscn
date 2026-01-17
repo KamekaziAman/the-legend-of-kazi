@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://df3hve4wd6pkr"]
+
+[ext_resource type="FontFile" uid="uid://dwbgwwxyspnp6" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="2_7u1ja"]
+[ext_resource type="Texture2D" uid="uid://c18gu2wo20v4t" path="res://Assets/User_Interface/360_F_1838738980_sYogX969BmEckp3nWTpJan1pvw5IzjpV-removebg-preview.png" id="2_tpxmf"]
+[ext_resource type="Texture2D" uid="uid://rc62572y1ope" path="res://Assets/User_Interface/1-removebg-preview.png" id="3_ah1cr"]
+
+[node name="MoveLabel" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -18.0
+offset_top = 34.0
+offset_right = 180.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("2_7u1ja")
+text = "For Movement Space to JUMP"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.6666666
+anchor_top = -1.0285715
+anchor_right = 1.6666666
+anchor_bottom = -1.0285715
+offset_left = -18.0
+offset_top = 34.0
+offset_right = 180.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("2_7u1ja")
+text = "For Shoot press Shift"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="360F1838738980SYogX969BmEckp3nWTpJan1Pvw5IzjpVRemovebgPreview" type="Sprite2D" parent="Label"]
+position = Vector2(63, -28)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_tpxmf")
+region_enabled = true
+region_rect = Rect2(371, 187, 74, 77)
+
+[node name="1RemovebgPreview" type="Sprite2D" parent="Label"]
+position = Vector2(346, -28)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_ah1cr")
+
+[node name="360F1838738980SYogX969BmEckp3nWTpJan1Pvw5IzjpVRemovebgPreview" type="Sprite2D" parent="."]
+position = Vector2(3, 5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_tpxmf")
+region_enabled = true
+region_rect = Rect2(196, 186, 74, 78)

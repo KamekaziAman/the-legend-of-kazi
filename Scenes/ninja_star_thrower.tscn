@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://20hidg30ap70"]
+
+[ext_resource type="Texture2D" uid="uid://ceqvagagkd6lh" path="res://Assets/Obstacles/launcher.png" id="1_kca7o"]
+[ext_resource type="Script" uid="uid://b03dl77s6x3ky" path="res://Scenes/ninja_star_thrower.gd" id="1_myttt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myttt"]
+size = Vector2(16, 16)
+
+[node name="NinjaStarThrower" type="Area2D"]
+script = ExtResource("1_myttt")
+
+[node name="Launcher" type="Sprite2D" parent="."]
+scale = Vector2(0.051612902, 0.051612902)
+texture = ExtResource("1_kca7o")
+region_enabled = true
+region_rect = Rect2(95, 95, 310, 310)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_myttt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_myttt")
